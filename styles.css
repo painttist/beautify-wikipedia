@@ -1,0 +1,243 @@
+
+:root {
+	--col-bg: #f6f6f6;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 8px;
+  border-radius: 14px;
+  background-color: #eee; /* or add it to the track */
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 14px;
+}
+
+#firstHeading, #bodyContent {
+	font-family: Arial;
+	max-width: 780px;
+	margin: auto;
+}
+
+#firstHeading {
+	font-size: 32px;
+	padding: 16px 0px;
+	margin-bottom: 16px;
+}
+
+#bodyContent {
+	font-size: 16px;
+}
+
+/* Two buttons, Top Left*/
+
+#left-navigation {
+	margin-left: 1em;
+}
+
+#content {
+	border: none;
+	margin-left: 0px;
+}
+
+/* Small sub & sup */
+.mw-body-content sup, .mw-body-content sub, span.reference {
+	padding: 0px 0.2em;
+}
+
+.thumbimage {
+	border: none;
+}
+
+#searchform {
+	margin-top: 0.25em;
+}
+
+/* Alarm box */
+
+.ambox {
+	font-size: 14px;
+	background: var(--col-bg);
+}
+
+table.ambox {
+	margin: 1.5em 0px;
+	border-top: none;
+	border-right: none;
+	border-bottom: none;
+	/*border-left: 0.5em solid #f28500;*/
+}
+
+.mbox-image {
+	display: none;
+}
+
+/* Quote & media */
+.mw-parser-output .quotebox.floatright,
+.mw-parser-output table.mbox-small.noprint
+{
+	border: none !important;
+}
+
+/* Media Player */
+.k-player .control-bar {
+	background: var(--col-bg);
+	border: none;
+	padding: 0.5em;
+}
+
+.mediaContainer {
+	padding: 1em 0px;
+}
+
+/* Right Menu | Table */
+
+.mw-body-content .mw-parser-output .sidebar，
+{
+	display: inline;
+	
+    padding: 1em;
+    border: none;
+}
+
+/* Subtitle Note */
+
+.mw-parser-output div.hatnote[role="note"] {
+	padding-left: 0px;
+}
+
+/* Table of content */
+.toc, .infobox, div.thumbinner {
+	border: none;
+	padding: 1em;
+	margin-top: 1.5em;
+}
+
+.mw-highlight pre, code {
+	font-family: "Consolas", Courier, monospace;
+	font-size: 0.9em;
+}
+
+.vector-menu-tabs a {
+	background: none;
+}
+
+.vector-menu-tabs li {
+	background: none;
+}
+
+.vector-menu-tabs li a {
+	/*Links to the top*/
+	padding-top: 0.75em;
+}
+
+.vector-menu-tabs {
+	background: none;
+}
+
+#mw-page-base {
+	background: none;
+}
+
+/*Left Menu*/
+
+.vector-menu-portal h3 {
+	/*Menu Heading*/
+	background-image: none;
+	border-bottom: 1px solid #c8ccd1 ;
+}
+
+
+/* Left Side bar */
+
+#mw-panel {
+	position: fixed;
+	width: 12em;
+	overflow-y: auto;
+	white-space: nowrap;
+	/*width: 2em;*/
+	/*height: 2em;*/
+	height: 100%;
+	padding: 0px;
+	/*margin-left: -90%;*/
+	/*left: calc(-100% + 10em);*/
+	transform: translateX( calc(-100% + 2px ));
+	background: white;
+	transition: transform 0.25s ease;
+	/*border-radius: 0px 0px 10em 0px;*/
+}
+
+#mw-panel:hover {
+	transform: translateX(0%)
+}
+
+/* Heading */
+.mw-headline {
+	/* Add some padding so anchor link feels slightly better */
+	padding-top: 1em; 
+}
+
+
+/* When the screen is wide enough*/
+
+@media only screen and (min-width: 1720px) {
+	
+	/* The intuitive position absolute doesn't work */
+	
+	/* Right Menu | Table */
+	.mw-body-content .mw-parser-output .sidebar,
+	.infobox, 
+	.thumb.tright, 
+	.mw-parser-output div.quotebox.floatright,
+	.mw-parser-output table.mbox-small.noprint
+	{
+		position: -webkit-sticky;
+		position: sticky;
+		border: none;
+		padding: 1em;
+		
+		float: right;
+    	margin-left: -28em;
+    	margin-right: -28em;
+    	width: 24em;
+    	
+    	/*float: right;*/
+    	
+    	display: inline-block;
+	}
+	
+	 /*Table of content */
+	.toc {
+		/*position: -webkit-sticky;*/
+		/*position: sticky;*/
+		
+		position: sticky;
+		
+		float: none;
+		
+		top: 2em;
+		/*bottom: 0px;*/
+		width: 22em;
+		margin-left: -26em;
+		margin-right: -26em;
+		
+		float: left;
+		
+		/*margin-top: 0px;*/
+		/*margin-bottom: calc(-100% - 11px);*/
+		
+		/*transform:translateY(-50%);*/
+		/*margin-top: -100%;*/
+		
+		/*overflow: auto;*/
+		/*display: inline-block;*/
+		
+		display: block;
+		max-height: calc(100vh - 4em);
+		overflow: auto;
+		
+		box-sizing: border-box;
+	}
+}
